@@ -3,7 +3,7 @@
  * Plugin Name: Checathlon Plus
  * Plugin URI:  https://foxland.fi/downloads/checathlon/
  * Description: Extra features for Checathlon theme.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Sami Keijonen
  * Author URI:  https://foxland.fi/
  * Text Domain: checathlon-plus
@@ -157,7 +157,7 @@ final class Checathlon_Plus {
 		$this->js_uri  = trailingslashit( $this->dir_uri . 'assets/js'  );
 		$this->css_uri = trailingslashit( $this->dir_uri . 'assets/css' );
 
-		$this->version        = '1.0.0';
+		$this->version        = '1.1.0';
 		$this->plugin_name    = 'Checathlon Plus';
 		$this->plugin_slug    = 'checathlon-plus';
 		$this->remote_api_url = 'http://foxland.fi';
@@ -191,6 +191,9 @@ final class Checathlon_Plus {
 		// Internationalize the text strings used.
 		add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
 
+		// Load the Customizer preview JS.
+		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
+
 	}
 
 	/**
@@ -212,7 +215,7 @@ final class Checathlon_Plus {
 			include( $this->dir_path . 'plugin-updater/plugin-updater-admin.php' );
 		}
 
-		/* Loads the admin updater class */
+		// Loads the admin updater class.
 		$updater = new EDD_Plugin_Updater_Admin(
 			array(
 				'remote_api_url' => $this->remote_api_url, // Site where EDD is hosted
@@ -261,8 +264,28 @@ final class Checathlon_Plus {
 		// Load functions files.
 		require_once( $this->dir_path . 'inc/customizer.php' );
 		require_once( $this->dir_path . 'inc/class-widget-pricing.php' );
+		require_once( $this->dir_path . 'inc/functions-icons.php' );
+
+		// Custom fonts.
+		require_once( $this->dir_path . 'inc/custom-fonts.php' );
+		require_once( $this->dir_path . 'inc/custom-fonts/custom-fonts.php' );
+
+		// Custom colors.
+		require_once( $this->dir_path . 'inc/custom-colors.php' );
+		require_once( $this->dir_path . 'inc/custom-colors/custom-colors.php' );
 
 	}
+
+	/**
+	 * Binds the JS handlers to make Customizer color controls happen in live preview.
+	 *
+	 * @since  1.1.0
+	 * @access public
+	 * @return void
+	 */
+		public function customize_preview_js() {
+			wp_enqueue_script( 'checathlon-plus-customize-preview', $this->js_uri . 'customize-preview.js', array( 'customize-preview' ), '20170801', true );
+		}
 
 	/**
 	 * Loads the translation files.
