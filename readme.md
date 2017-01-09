@@ -22,6 +22,7 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 * Add Google fonts feature: now you can set different fonts for text and titles.
 * Add colors feature: now you can set different colors for text, titles, header, and footer.
+* Add SVG social link icons in custom menu widget.
 * Update plugin updater to version 1.6.8.
 
 ### Version 1.0.0
