@@ -57,6 +57,12 @@ function checathlon_plus_fonts_heading() {
 			'weight' => array( '400', '400i' ),
 			'subset' => array( 'latin', 'latin-ext' ),
 		),
+		'Libre Baskerville' => array(
+			'name'   => 'Libre Baskerville',
+			'family' => '"Libre Baskerville",cursive',
+			'weight' => array( '400', '400i', '700' ),
+			'subset' => array( 'latin', 'latin-ext' ),
+		),
 		'Lobster Two' => array(
 			'name'   => 'Lobster Two',
 			'family' => '"Lobster Two",cursive',
