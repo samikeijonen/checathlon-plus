@@ -20,10 +20,10 @@ $colors_config = array(
 			'mobile-navigation-hover' => '#ffffff',
 		),
 		'style-labels' => array(
-			esc_html__( 'Site header backgroud', 'checathlon-plus' ),
+			esc_html__( 'Site header background', 'checathlon-plus' ),
 			esc_html__( 'Main nagivation link color', 'checathlon-plus' ),
 			esc_html__( 'Main nagivation link hover and active color', 'checathlon-plus' ),
-			esc_html__( 'Mobile navigation backgroud', 'checathlon-plus' ),
+			esc_html__( 'Mobile navigation background', 'checathlon-plus' ),
 			esc_html__( 'Mobile nagivation link color', 'checathlon-plus' ),
 			esc_html__( 'Mobile nagivation link hover and active color', 'checathlon-plus' ),
 		),
@@ -83,7 +83,7 @@ $colors_config = array(
 			'footer-widget-color' => '#ffffff',
 		),
 		'style-labels' => array(
-			esc_html__( 'Footer backgroud', 'checathlon-plus' ),
+			esc_html__( 'Footer background', 'checathlon-plus' ),
 			esc_html__( 'Text color', 'checathlon-plus' ),
 			esc_html__( 'Link color', 'checathlon-plus' ),
 			esc_html__( 'Link hover color', 'checathlon-plus' ),
