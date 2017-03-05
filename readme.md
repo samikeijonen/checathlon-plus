@@ -18,7 +18,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
-### Version 1.1.0 - January 10, 2019
+### Version 1.1.1 - March 5, 2017
+
+* Update plugin updater to version 1.6.11.
+* Check that EDD is active before setting partial refresh for it's features.
+
+### Version 1.1.0 - January 10, 2017
 
 * Add Google fonts feature: now you can set different fonts for text and titles.
 * Add colors feature: now you can set different colors for text, titles, header, and footer.

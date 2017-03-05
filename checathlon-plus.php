@@ -3,7 +3,7 @@
  * Plugin Name: Checathlon Plus
  * Plugin URI:  https://foxland.fi/downloads/checathlon/
  * Description: Extra features for Checathlon theme.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      Sami Keijonen
  * Author URI:  https://foxland.fi/
  * Text Domain: checathlon-plus
@@ -157,7 +157,7 @@ final class Checathlon_Plus {
 		$this->js_uri  = trailingslashit( $this->dir_uri . 'assets/js'  );
 		$this->css_uri = trailingslashit( $this->dir_uri . 'assets/css' );
 
-		$this->version        = '1.1.0';
+		$this->version        = '1.1.1';
 		$this->plugin_name    = 'Checathlon Plus';
 		$this->plugin_slug    = 'checathlon-plus';
 		$this->remote_api_url = 'http://foxland.fi';
