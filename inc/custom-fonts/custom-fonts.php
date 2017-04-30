@@ -3,6 +3,11 @@
  * Custom Fonts Module.
 **/
 
+// Bail if there is no support for custom fonts.
+if ( ! current_theme_supports( 'checathlon-plus-custom-fonts' ) ) {
+	return;
+}
+
 /* === VARS === */
 
 /**
@@ -220,7 +225,7 @@ function checathlon_plus_fonts_print_style(){
 	$config = checathlon_plus_fonts_config();
 
 	// Loop settings.
-	foreach( $config as $section => $section_data ) {
+	foreach ( $config as $section => $section_data ) {
 
 		// Get fonts saved.
 		$font = get_theme_mod( $section, $section_data['default'] );
@@ -266,7 +271,7 @@ function checathlon_plus_fonts_body_class( $classes ) {
 	$config = checathlon_plus_fonts_config();
 
 	// Foreach setting.
-	foreach( $config as $section => $section_data ) {
+	foreach ( $config as $section => $section_data ) {
 
 		// Format font name.
 		$font = get_theme_mod( $section, $section_data['default'] );
@@ -306,7 +311,7 @@ function checathlon_plus_google_fonts_url( $fonts, $subsets = array() ){
 	$family    = array();
 
 	// Format Each Font Family in Array.
-	foreach( $fonts as $font_name => $font_weight ) {
+	foreach ( $fonts as $font_name => $font_weight ) {
 		$font_name = str_replace( ' ', '+', $font_name );
 		if ( ! empty( $font_weight ) ) {
 			if ( is_array( $font_weight ) ) {

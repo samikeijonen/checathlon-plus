@@ -3,6 +3,11 @@
  * Custom Colors Module.
 **/
 
+// Bail if there is no support for custom colors.
+if ( ! current_theme_supports( 'checathlon-plus-custom-colors' ) ) {
+	return;
+}
+
 /* === VARS === */
 
 /**
