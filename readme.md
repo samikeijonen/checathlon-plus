@@ -18,6 +18,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.1.2 - April 30, 2017
+
+* Check does theme supports custom fonts and colours before loading the files.
+* Update plugin updater to version 1.6.12.
+
 ### Version 1.1.1 - March 5, 2017
 
 * Update plugin updater to version 1.6.11.
