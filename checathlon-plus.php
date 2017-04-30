@@ -186,7 +186,7 @@ final class Checathlon_Plus {
 		add_action( 'init', array( $this, 'plugin_updater' ) );
 
 		// Load files after theme has setup.
-		add_action( 'after_setup_theme', array( $this, 'load_files' ), 20 );
+		add_action( 'after_setup_theme', array( $this, 'load_files' ), 10 );
 
 		// Internationalize the text strings used.
 		add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
@@ -267,16 +267,12 @@ final class Checathlon_Plus {
 		require_once( $this->dir_path . 'inc/functions-icons.php' );
 
 		// Custom fonts.
-		if ( current_theme_supports( 'checathlon-plus-custom-fonts' ) ) {
-			require_once( $this->dir_path . 'inc/custom-fonts.php' );
-			require_once( $this->dir_path . 'inc/custom-fonts/custom-fonts.php' );
-		}
+		require_once( $this->dir_path . 'inc/custom-fonts.php' );
+		require_once( $this->dir_path . 'inc/custom-fonts/custom-fonts.php' );
 
 		// Custom colors.
-		if ( current_theme_supports( 'checathlon-plus-custom-colors' ) ) {
-			require_once( $this->dir_path . 'inc/custom-colors.php' );
-			require_once( $this->dir_path . 'inc/custom-colors/custom-colors.php' );
-		}
+		require_once( $this->dir_path . 'inc/custom-colors.php' );
+		require_once( $this->dir_path . 'inc/custom-colors/custom-colors.php' );
 	}
 
 	/**
